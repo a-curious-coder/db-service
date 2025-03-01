@@ -35,8 +35,10 @@ This repository manages a shared PostgreSQL instance in Docker for multiple webs
   `text
   DB_USER=admin
   DB_PASSWORD=securepass123
+  APP1_DB=app1_db
   APP1_USER=app1_user
   APP1_PASSWORD=app1pass123
+  APP2_DB=app2_db
   APP2_USER=app2_user
   APP2_PASSWORD=app2pass123
   `
