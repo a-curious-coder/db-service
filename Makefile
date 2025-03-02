@@ -3,8 +3,7 @@ export
 
 .PHONY: all clean test up down logs test-admin test-app1 rebuild backup
 
-all:
-	docker-compose up -d
+all: up
 
 clean:
 	docker-compose down
