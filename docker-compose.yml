@@ -1,11 +1,12 @@
 services:
   db:
-    image: postgres:15
+    image: postgres:15-alpine
     environment:
       POSTGRES_USER: ${DB_USER}
       POSTGRES_PASSWORD: ${DB_PASSWORD}
-      APP1_USER: ${APP1_USER}              # Project-specific user
-      APP1_PASSWORD: ${APP1_PASSWORD}      # Project-specific password
+      APP1_DB: ${APP1_DB}
+      APP1_USER: ${APP1_USER}
+      APP1_PASSWORD: ${APP1_PASSWORD}
     volumes:
       - pgdata:/var/lib/postgresql/data
       - ./init.sh:/docker-entrypoint-initdb.d/init.sh
